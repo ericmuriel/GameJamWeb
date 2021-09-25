@@ -23,7 +23,7 @@ export function Loadingbar() {
                     <div><img src={image} className='machineCapture'></img></div>
                     <div className='percentage'>{`${name.value}% del total de energía acumulada `}</div>
                 </div>
-                <div><progress className='progressBar' id="file" value={name.count} max="100"> 32% </progress></div>
+                <div><progress className='progressBar' id="file" value={name.value} max="100"> 32% </progress></div>
                 <div className='footerText'>
                     <div>{name.value} personas se han unido para salvar el mundo!</div>
                     <div>Ayúdanos a alcanzar el 100%</div>
