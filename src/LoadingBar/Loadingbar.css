@@ -1,0 +1,39 @@
+.landingPage{
+    width: 100% ;
+    height: 937px;
+    background-color: #5e7e90;
+}
+.title{
+    padding-top: 100px;
+    font-size: 70px;
+    color: #9dcde8;
+}
+.machineContainer{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.footerText{
+    color:white;
+    font-size: 30px;
+    padding-top: 50px;
+}
+.callToAction{
+    padding-top: 50px;
+    color:white;
+}
+.percentage{
+    font-size: 30px;
+    width: 280px;
+    padding-top: 120px;
+}
+.machineCapture{
+    width: 350px;
+    height: 350px;
+    padding-bottom: 20px;
+}
+.progressBar{
+    padding-top: 50px;
+    width: 700px;
+    height: 40px;
+}
