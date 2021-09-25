@@ -25,7 +25,7 @@ export function Loadingbar() {
                 </div>
                 <div><progress className='progressBar' id="file" value={name.value} max="100"> 32% </progress></div>
                 <div className='footerText'>
-                    <div>{name.value} personas se han unido para salvar el mundo!</div>
+                    <div>{name.count} personas se han unido para salvar el mundo!</div>
                     <div>Ayúdanos a alcanzar el 100%</div>
                 </div>
                 <div className='callToAction'>LINK</div>
