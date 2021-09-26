@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import './Loadingbar.css'
 import image from '../ImageFolder/image.png'
+import imageLogo from '../ImageFolder/imageLogo.png'
+import logo from '../ImageFolder/logo.png'
+
  
 export function Loadingbar() {
     
@@ -18,10 +21,10 @@ export function Loadingbar() {
 
         return (
             <div className='landingPage'>
-                <div className='title'>THE LAST HOPE</div>
+                <div className='title'><img className='imgLogo' src={imageLogo} ></img></div>
                 <div className='machineContainer'>
                     <div><img src={image} className='machineCapture'></img></div>
-                    <div className='percentage'>{`${name.value}% del total de energía acumulada `}</div>
+                    <div className='percentage'><div className='value'>{name.value}<div>%</div></div> del total de energía acumulada</div>
                 </div>
                 <div><progress className='progressBar' id="file" value={name.value} max="100"> 32% </progress></div>
                 <div className='footerText'>
@@ -29,6 +32,7 @@ export function Loadingbar() {
                     <div>Ayúdanos a alcanzar el 100%</div>
                 </div>
                 <div className='callToAction'>LINK</div>
+                <img src={logo} className='logo'></img>
 
             </div>
         )
