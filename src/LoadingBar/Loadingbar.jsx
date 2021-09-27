@@ -50,7 +50,7 @@ export function Loadingbar() {
                     <div>{name.count} personas se han unido para salvar el mundo!</div>
                     <div>Ayúdanos a alcanzar el 100%</div>
                 </div>
-                <div className='callToAction'>LINK</div>
+                <div className='callToAction'><a href={'https://peryloth.itch.io/thelasthope'} target="_blank" style={{ fontSize: '18px', color:'white'}}>LINK</a></div>
                 <img src={logo} className='logo'></img>
 
             </div>
