@@ -10,6 +10,7 @@ import logo from '../ImageFolder/logo.png'
 export function Loadingbar() {
     
     const [name, setName] = useState([]);
+    const [urls, setUrls] = useState([]);
     
         useEffect(() => {
         axios
@@ -17,15 +18,33 @@ export function Loadingbar() {
         .then((res) => {
             setName(res.data);
         })
-        }, [name.value]);   
+        }, [name.value]);
+    
+        useEffect(() => {
+        axios
+        .get(`https://dev.sgj3.peryloth.com/api/getConf/url_cinematica_inicial`)
+        .then((res) => {
+            setUrls(res.data);
+        })
+        }, [urls?.valor]);
+    
+    const videoOrNot = () => {
+        return (
+            name.value=== 100 && urls?.valor  ?
+                <video width="500" controls>
+                    <source src={urls?.valor} type="video/mp4"/>
+                </video> :
+                <div className='machineContainer'>
+                        <div><img src={image} className='machineCapture'></img></div>
+                        <div className='percentage'><div className='value'>{name.value}<div>%</div></div> del total de energía acumulada</div>
+                </div>
+        )
 
+    }
         return (
             <div className='landingPage'>
                 <div className='title'><img className='imgLogo' src={imageLogo} ></img></div>
-                <div className='machineContainer'>
-                    <div><img src={image} className='machineCapture'></img></div>
-                    <div className='percentage'><div className='value'>{name.value}<div>%</div></div> del total de energía acumulada</div>
-                </div>
+                {videoOrNot()}
                 <div><progress className='progressBar' id="file" value={name.value} max="100"> 32% </progress></div>
                 <div className='footerText'>
                     <div>{name.count} personas se han unido para salvar el mundo!</div>
